@@ -11,12 +11,16 @@ class SlingShot{
         World.add(world, this.SlingShot);
     }
 
+    fly(){
+       this.SlingShot.bodyA=null; 
+    }
       display(){
-            var pointA = this.SlingShot.bodyA.position;
+        if(this.SlingShot.bodyA){
+        var pointA = this.SlingShot.bodyA.position;
             var pointB = this.pointB;
             strokeWeight(4);
             line(pointA.x, pointA.y, pointB.x, pointB.y);
-        
+        }  
     }
     
 }
